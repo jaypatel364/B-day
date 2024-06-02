@@ -16,18 +16,34 @@ $('document').ready(function(){
 			$('#b77').animate({top:240, left: vw+250},500);
 		});
 
-	$('#turn_on').click(function(){
-		$('#bulb_yellow').addClass('bulb-glow-yellow');
+		function turnOn(){
+			$('#bulb_yellow').addClass('bulb-glow-yellow');
 		$('#bulb_red').addClass('bulb-glow-red');
 		$('#bulb_blue').addClass('bulb-glow-blue');
 		$('#bulb_green').addClass('bulb-glow-green');
 		$('#bulb_pink').addClass('bulb-glow-pink');
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
-		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+		$('#turn_on').fadeOut('slow').delay(5000).promise().done(function(){
 			$('#play').fadeIn('slow');
 		});
-	});
+		}
+
+		turnOn();
+	
+	// $('#turn_on').click(function(){
+	// 	$('#bulb_yellow').addClass('bulb-glow-yellow');
+	// 	$('#bulb_red').addClass('bulb-glow-red');
+	// 	$('#bulb_blue').addClass('bulb-glow-blue');
+	// 	$('#bulb_green').addClass('bulb-glow-green');
+	// 	$('#bulb_pink').addClass('bulb-glow-pink');
+	// 	$('#bulb_orange').addClass('bulb-glow-orange');
+	// 	$('body').addClass('peach');
+	// 	$(this).fadeOut('slow').delay(5000).promise().done(function(){
+	// 		$('#play').fadeIn('slow');
+	// 	});
+	// });
+
 	$('#play').click(function(){
 		var audio = $('.song')[0];
         audio.play();
@@ -39,17 +55,25 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
-			$('#bannar_coming').fadeIn('slow');
+		$(this).fadeOut('slow').delay(8300).promise().done(function(){
+			// $('#bannar_coming').fadeIn('slow');
+			bannerComing();
 		});
 	});
 
-	$('#bannar_coming').click(function(){
+	function bannerComing(){
+
 		$('.bannar').addClass('bannar-come');
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
+		$('#bannar_coming').fadeOut('slow').delay(6000).promise().done(function(){
 			$('#balloons_flying').fadeIn('slow');
-		});
-	});
+		});}
+
+	// $('#bannar_coming').click(function(){
+	// 	$('.bannar').addClass('bannar-come');
+	// 	$(this).fadeOut('slow').delay(6000).promise().done(function(){
+	// 		$('#balloons_flying').fadeIn('slow');
+	// 	});
+	// });
 
 	function loopOne() {
 		var randleft = 1000*Math.random();
