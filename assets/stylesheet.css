@@ -1289,29 +1289,35 @@ audio {
 	border-radius: 50%;
 	box-shadow: #aaa 0 0 4px;
 }
-
 .btn-primary {
-        border-color: #466baf;
-        padding: 10px;
-        text-transform: uppercase;
-        font-family: 'Signika', sans-serif;
-        font-weight: 700;
-        color: #fff;
-        background-color: #466baf;
-}
-    .btn-primary:hover,
-    .btn-primary:focus,
-    .btn-primary:active,
-    .btn-primary.active,
-    .open .dropdown-toggle.btn-primary {
-        border-color: #fff;
-        color: #fff;
-        background-color: #466baf;
-    }
-
-
-
-    /*controlling tablet width*/
+	background-color: #468dd8; /* Base color */
+	background-image: linear-gradient(to right, #468dd8 0%, #00c7ff 50%); /* Gradient */
+	border-color: transparent; /* Remove border color */
+	padding: 10px 20px; /* Adjust padding for wider button */
+	text-transform: uppercase;
+	font-family: 'Signika', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	cursor: pointer; /* Indicate clickable button */
+	transition: all 0.3s ease; /* Apply transition to all properties */
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active,
+  .open .dropdown-toggle.btn-primary {
+	border-color: linear-gradient(to right, #468dd8 0%, #00c7ff 50%); /* Gradient border on hover */
+	background-color: #00c7ff; /* Change background color on hover */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+	transform: scale(1.05); /* Increase size slightly on hover */
+	/* Remove color change for better contrast with lighter background */
+  }
+  
+  .btn-primary:active {
+	transform: scale(0.95); /* Shrink slightly on press */
+  }
+	  /*controlling tablet width*/
     /*@media only screen and (max-width: 720px){
     	.container {
     		-webkit-transform: scale(0.9);
